@@ -119,7 +119,7 @@ impl LanguageModelProvider for MoonShotLanguageModelProvider {
     }
 
     fn icon(&self) -> IconOrSvg {
-        IconOrSvg::Icon(IconName::AiOpenAiCompat)
+        IconOrSvg::Icon(IconName::AiMoonShot)
     }
 
     fn default_model(&self, _cx: &App) -> Option<Arc<dyn LanguageModel>> {

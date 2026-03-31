@@ -128,6 +128,7 @@ members = [
     "crates/migrator",
     "crates/miniprofiler_ui",
     "crates/mistral",
+    "crates/moonshot",
     "crates/multi_buffer",
     "crates/nc",
     "crates/net",
@@ -378,6 +379,7 @@ menu = { path = "crates/menu" }
 mermaid-rs-renderer = { git = "https://github.com/zed-industries/mermaid-rs-renderer", rev = "374db9ead5426697c6c2111151d9f246899bc638", default-features = false }
 migrator = { path = "crates/migrator" }
 mistral = { path = "crates/mistral" }
+moonshot = { path = "crates/moonshot" }
 multi_buffer = { path = "crates/multi_buffer" }
 miniprofiler_ui = { path = "crates/miniprofiler_ui" }
 nc = { path = "crates/nc" }

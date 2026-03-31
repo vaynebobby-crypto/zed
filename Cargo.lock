@@ -9494,6 +9494,7 @@ dependencies = [
  "log",
  "menu",
  "mistral",
+ "moonshot",
  "ollama",
  "open_ai",
  "open_router",
@@ -10709,6 +10710,16 @@ dependencies = [
  "smallvec",
  "tagptr",
  "uuid",
+]
+
+[[package]]
+name = "moonshot"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "schemars",
+ "serde",
+ "strum 0.27.2",
 ]
 
 [[package]]

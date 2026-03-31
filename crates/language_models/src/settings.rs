@@ -6,10 +6,10 @@ use settings::RegisterSetting;
 use crate::provider::{
     anthropic::AnthropicSettings, bedrock::AmazonBedrockSettings, cloud::ZedDotDevSettings,
     deepseek::DeepSeekSettings, google::GoogleSettings, lmstudio::LmStudioSettings,
-    mistral::MistralSettings, ollama::OllamaSettings, open_ai::OpenAiSettings,
-    open_ai_compatible::OpenAiCompatibleSettings, open_router::OpenRouterSettings,
-    opencode::OpenCodeSettings, vercel::VercelSettings, vercel_ai_gateway::VercelAiGatewaySettings,
-    x_ai::XAiSettings,
+    mistral::MistralSettings, moonshot::MoonShotSettings, ollama::OllamaSettings,
+    open_ai::OpenAiSettings, open_ai_compatible::OpenAiCompatibleSettings,
+    open_router::OpenRouterSettings, opencode::OpenCodeSettings, vercel::VercelSettings,
+    vercel_ai_gateway::VercelAiGatewaySettings, x_ai::XAiSettings,
 };
 
 #[derive(Debug, RegisterSetting)]
@@ -20,6 +20,7 @@ pub struct AllLanguageModelSettings {
     pub google: GoogleSettings,
     pub lmstudio: LmStudioSettings,
     pub mistral: MistralSettings,
+    pub moonshot: MoonShotSettings,
     pub ollama: OllamaSettings,
     pub opencode: OpenCodeSettings,
     pub open_router: OpenRouterSettings,
@@ -42,6 +43,7 @@ impl settings::Settings for AllLanguageModelSettings {
         let google = language_models.google.unwrap();
         let lmstudio = language_models.lmstudio.unwrap();
         let mistral = language_models.mistral.unwrap();
+        let moonshot = language_models.moonshot.unwrap();
         let ollama = language_models.ollama.unwrap();
         let opencode = language_models.opencode.unwrap();
         let open_router = language_models.open_router.unwrap();
@@ -81,6 +83,10 @@ impl settings::Settings for AllLanguageModelSettings {
             mistral: MistralSettings {
                 api_url: mistral.api_url.unwrap(),
                 available_models: mistral.available_models.unwrap_or_default(),
+            },
+            moonshot: MoonShotSettings {
+                api_url: moonshot.api_url.unwrap(),
+                available_models: moonshot.available_models.unwrap_or_default(),
             },
             ollama: OllamaSettings {
                 api_url: ollama.api_url.unwrap(),

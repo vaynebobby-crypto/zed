@@ -2255,6 +2255,9 @@
     "mistral": {
       "api_url": "https://api.mistral.ai/v1",
     },
+    "moonshot": {
+      "api_url": "https://api.moonshot.cn/v1",
+    },
     "vercel": {
       "api_url": "https://api.v0.dev/v1",
     },
